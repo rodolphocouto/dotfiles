@@ -4,6 +4,11 @@
     - { src: "~/.dotfiles/.config/gtk-2.0/gtkfilechooser.ini", dest: "~/.config/gtk-2.0/gtkfilechooser.ini"}
     - { src: "~/.dotfiles/.config/gtk-3.0/settings.ini", dest: "~/.config/gtk-3.0/settings.ini"}
     - { src: "~/.dotfiles/.config/i3/config", dest: "~/.config/i3/config"}
+    - { src: "~/.dotfiles/.config/i3/arch.png", dest: "~/.config/i3/arch.png"}
     - { src: "~/.dotfiles/.config/polybar/config", dest: "~/.config/polybar/config"}
+    - { src: "~/.dotfiles/.config/polybar/launch.sh", dest: "~/.config/polybar/launch.sh"}
+    - { src: "~/.dotfiles/.config/polybar/playerctl_playpause.sh", dest: "~/.config/polybar/playerctl_playpause.sh"}
+    - { src: "~/.dotfiles/.config/polybar/playerctl_title.sh", dest: "~/.config/polybar/playerctl_title.sh"}
     - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config"}
+    - { src: "~/.dotfiles/.config/rofi/glue_pro_blue.rasi", dest: "~/.config/rofi/glue_pro_blue.rasi"}
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config"}
