@@ -1,7 +1,7 @@
 export ZSH="/home/rodolpho/.oh-my-zsh"
 export GTK_IM_MODULE=cedilla
 
-ZSH_THEME="amuse"
+ZSH_THEME="lambda-mod"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
