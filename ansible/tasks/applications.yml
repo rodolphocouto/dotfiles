@@ -1,0 +1,77 @@
+- name: Install firefox
+  become: yes
+  pacman: 
+    name: firefox
+
+- name: Install chrome
+  packer: 
+    name: google-chrome
+
+- name: Install sublime text
+  packer: 
+    name: sublime-text-dev
+
+- name: Install vscode
+  packer: 
+    name: visual-studio-code-bin
+
+- name: Install spotify
+  packer: 
+    name: spotify
+
+- name: Install slack
+  packer: 
+    name: slack-desktop
+
+- name: Install skype
+  packer: 
+    name: skypeforlinux-preview-bin
+
+- name: Install whatsie
+  packer: 
+    name: whatsie
+
+- name: Install postman
+  packer: 
+    name: postman-bin
+
+- name: Install typora
+  packer: 
+    name: typora
+
+- name: Install docker and docker-compose
+  become: yes
+  pacman: 
+    name: 
+      - docker
+      - docker-compose
+
+- name: Enable docker daemon
+  become: yes
+  systemd: 
+    name: docker
+    enabled: yes
+    state: started
+
+- name: Install aws-cli
+  become: yes
+  pacman: 
+    name: aws-cli
+
+- name: Install openjdk 8
+  become: yes
+  pacman: 
+    name: jdk8-openjdk
+
+- name: Install golang
+  become: yes
+  pacman: 
+    name: go
+
+- name: Install nodejs, npm and yarn
+  become: yes
+  pacman:
+    name: 
+      - nodejs
+      - npm
+      - yarn

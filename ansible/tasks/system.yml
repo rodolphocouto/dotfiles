@@ -106,6 +106,7 @@
       - unzip
       - jq
       - xclip
+      - sl
 
 - name: Install pacman fonts
   become: yes
@@ -148,7 +149,7 @@
   packer:
     name: rofi-calc
 
-- name: Install PCMan
+- name: Install pcman
   become: yes
   pacman: 
     name: pcmanfm
