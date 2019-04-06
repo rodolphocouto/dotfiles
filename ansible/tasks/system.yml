@@ -81,8 +81,12 @@
   shell: chsh -s /bin/zsh rodolpho
 
 - name: Install oh-my-zsh
-  become: yes
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+- name: Install lambda-mod ZSH theme
+  get_url: 
+    url: https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme
+    dest: ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
 
 - name: Install termite
   become: yes
