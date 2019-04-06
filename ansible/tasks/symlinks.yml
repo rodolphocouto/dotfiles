@@ -15,3 +15,4 @@
     - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config"}
     - { src: "~/.dotfiles/.config/rofi/glue_pro_blue.rasi", dest: "~/.config/rofi/glue_pro_blue.rasi"}
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config"}
+    - { src: "~/.dotfiles/.oh-my-zsh/themes/lambda-mod.zsh-theme", dest: "~/.oh-my-zsh/themes/lambda-mod.zsh-theme"}
