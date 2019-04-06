@@ -1,0 +1,47 @@
+- name: Install pacman tools
+  become: yes
+  pacman:
+    name:
+      - reflector
+      - pacman-contrib
+
+- name: Optimize pacman mirrors
+  become: yes
+  shell: reflector --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+  when: false
+
+- name: Install connman
+  become: yes
+  pacman: 
+    name: connman
+
+- name: Install connman-ncurses
+  packer: 
+    name: connman-ncurses
+
+- name: Ensure connman config dir exists
+  become: yes
+  file: 
+    path: /etc/connman 
+    state: directory
+
+- name: Copy connman config
+  become: yes
+  copy: 
+    src: ../files/connman.conf 
+    dest: /etc/connman/main.conf
+
+- name: Enable and start connman
+  become: yes
+  systemd: 
+    name: connman 
+    enabled: yes 
+    state: started
+
+- name: Remove network tools from base
+  become: yes
+  pacman: 
+    name: 
+      - netctl
+      - dhcpcd
+    state: absent

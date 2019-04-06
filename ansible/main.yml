@@ -2,4 +2,6 @@
   hosts: localhost
   connection: local
   tasks:
-    - include: tasks/symlinks.yml
+    - include: tasks/system.yml
+    - include: tasks/applications.yml
+    - include: tasks/dotfiles.yml
