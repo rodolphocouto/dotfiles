@@ -3,6 +3,7 @@
   with_items:
     - { src: "~/.dotfiles/.gitconfig", dest: "~/.gitconfig"}
     - { src: "~/.dotfiles/.xinitrc", dest: "~/.xinitrc"}
+    - { src: "~/.dotfiles/.zshrc", dest: "~/.zshrc"}
     - { src: "~/.dotfiles/.config/gtk-2.0/gtkfilechooser.ini", dest: "~/.config/gtk-2.0/gtkfilechooser.ini"}
     - { src: "~/.dotfiles/.config/gtk-3.0/settings.ini", dest: "~/.config/gtk-3.0/settings.ini"}
     - { src: "~/.dotfiles/.config/i3/config", dest: "~/.config/i3/config"}
