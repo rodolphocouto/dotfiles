@@ -45,3 +45,117 @@
       - netctl
       - dhcpcd
     state: absent
+
+- name: Install audio tools
+  become: yes
+  pacman:
+    name:
+      - alsa-utils
+      - pulseaudio
+      - pulseaudio-alsa
+      - pavucontrol
+      - playerctl
+
+- name: Install bluetooth tools
+  become: yes
+  pacman:
+    name:
+      - bluez
+      - bluez-utils
+      - pulseaudio-bluetooth
+
+- name: Enable bluetooth service
+  become: yes
+  systemd: 
+    name: bluetooth
+    enabled: yes
+    state: started
+
+- name: Install ZSH
+  become: yes
+  pacman: 
+    name: zsh
+
+- name: Set ZSH as user's shell
+  become: yes
+  shell: chsh -s /bin/zsh rodolpho
+
+- name: Install oh-my-zsh
+  become: yes
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+- name: Install termite
+  become: yes
+  pacman:
+    name: termite
+
+- name: Install core packages
+  become: yes
+  pacman:
+    name:
+      - git
+      - openssh
+      - openvpn
+      - curl
+      - wget
+      - zip
+      - unzip
+      - jq
+      - xclip
+
+- name: Install pacman fonts
+  become: yes
+  pacman:
+    name:
+      - ttf-dejavu
+      - ttf-fira-mono
+      - ttf-font-awesome
+      - noto-fonts
+      - noto-fonts-emoji
+      - noto-fonts-extra
+      - adobe-source-code-pro-fonts
+
+- name: Install aur fonts
+  packer: 
+    name: nerd-fonts-complete
+
+- name: Install Xorg and tools
+  become: yes
+  pacman:
+    name:
+      - xorg-server
+      - xorg-xinit
+
+- name: Install i3
+  become: yes
+  pacman: 
+    name: i3-wm
+
+- name: Install polybar
+  packer: 
+    name: polybar
+
+- name: Install rofi
+  become: yes
+  pacman:
+    name: rofi
+
+- name: Install rofi-calc
+  packer:
+    name: rofi-calc
+
+- name: Install PCMan
+  become: yes
+  pacman: 
+    name: pcmanfm
+
+- name: Install screen utilities
+  become: yes
+  pacman:
+    name:
+      - i3lock
+      - scrot
+      - feh
+      - light
+      - lxappearance
+      - lxrandr
