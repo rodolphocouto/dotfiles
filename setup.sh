@@ -1,10 +1,14 @@
 #!/bin/sh
 
-echo "Verifying packer installation..."
+echo "Verifying yay installation..."
 
-if [[ ! -x /usr/bin/packer ]]; then
-  echo "Installing packer..."
-  sudo pacman -S packer curl --noconfirm
+if [[ ! -x /usr/bin/yay ]]; then
+  echo "Installing yay..."
+  current_dir=$(pwd)
+  git clone https://aur.archlinux.org/yay.git ~/yay
+  cd ~/yay
+  makepkg -si
+  cd $current_dir
 fi
 
 echo "Verifying ansible installation..."
@@ -14,11 +18,11 @@ if [[ ! -x /usr/bin/ansible ]]; then
   sudo pacman -S ansible --noconfirm
 fi
 
-echo "Verifying ansible plugin for packer..."
+echo "Verifying ansible plugin for yay..."
 
-if [[ ! -x /usr/share/ansible/plugins/modules/packer ]]; then
-  echo "Installing ansible-packer..."
-  sudo curl -fLo /usr/share/ansible/plugins/modules/packer --create-dirs https://raw.githubusercontent.com/austinhyde/ansible-packer/master/packer
+if [[ ! -x /usr/share/ansible/plugins/modules/yay ]]; then
+  echo "Installing ansible-yay..."
+  sudo curl -fLo /usr/share/ansible/plugins/modules/yay --create-dirs https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
   sudo chmod -R 755 /usr/share/ansible/plugins
 fi
 

@@ -16,7 +16,7 @@
     name: connman
 
 - name: Install connman-ncurses
-  packer: 
+  yay: 
     name: connman-ncurses
 
 - name: Ensure connman config dir exists
@@ -140,7 +140,7 @@
       - adobe-source-code-pro-fonts
 
 - name: Install aur fonts
-  packer: 
+  yay: 
     name: siji-git
 
 - name: Install Xorg and tools
@@ -161,7 +161,7 @@
     state: directory
 
 - name: Install polybar
-  packer: 
+  yay: 
     name: polybar
 
 - name: Ensure polybar config dir exists
@@ -175,7 +175,7 @@
     name: rofi
 
 - name: Install rofi-calc
-  packer:
+  yay:
     name: rofi-calc
 
 - name: Ensure rofi config dir exists

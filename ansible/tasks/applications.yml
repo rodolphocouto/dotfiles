@@ -4,39 +4,39 @@
     name: firefox
 
 - name: Install chrome
-  packer: 
+  yay: 
     name: google-chrome
 
 - name: Install sublime text
-  packer: 
+  yay: 
     name: sublime-text-dev
 
 - name: Install vscode
-  packer: 
+  yay: 
     name: visual-studio-code-bin
 
 - name: Install spotify
-  packer: 
+  yay: 
     name: spotify
 
 - name: Install slack
-  packer: 
+  yay: 
     name: slack-desktop
 
 - name: Install skype
-  packer: 
+  yay: 
     name: skypeforlinux-preview-bin
 
 - name: Install whatsie
-  packer: 
+  yay: 
     name: whatsie
 
 - name: Install postman
-  packer: 
+  yay: 
     name: postman-bin
 
 - name: Install typora
-  packer: 
+  yay: 
     name: typora
 
 - name: Install docker and docker-compose
@@ -75,3 +75,15 @@
       - nodejs
       - npm
       - yarn
+
+- name: Install intellij ultimate
+  yay: 
+    name: intellij-idea-ultimate-edition
+
+- name: Install goland
+  yay: 
+    name: goland
+
+- name: Install datagrip
+  yay: 
+    name: datagrip
