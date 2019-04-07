@@ -10,6 +10,22 @@
   shell: reflector --protocol https --sort rate --save /etc/pacman.d/mirrorlist
   when: false
 
+- name: Clone yay repository
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: ~/yay
+
+- name: check yay installation
+  stat: 
+    path: /usr/bin/yay
+  register: yay
+
+- name: Install yay
+  shell: 
+    cmd: makepkg -si --noconfirm
+    chdir: ~/yay
+  when: yay.stat.exists == False
+
 - name: Install connman
   become: yes
   pacman: 

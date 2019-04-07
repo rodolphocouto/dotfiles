@@ -1,16 +1,5 @@
 #!/bin/sh
 
-echo "Verifying yay installation..."
-
-if [[ ! -x /usr/bin/yay ]]; then
-  echo "Installing yay..."
-  current_dir=$(pwd)
-  git clone https://aur.archlinux.org/yay.git ~/yay
-  cd ~/yay
-  makepkg -si
-  cd $current_dir
-fi
-
 echo "Verifying ansible installation..."
 
 if [[ ! -x /usr/bin/ansible ]]; then
