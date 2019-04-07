@@ -71,6 +71,18 @@
     enabled: yes
     state: started
 
+- name: Ensure modprobe config dir exists
+  become: yes
+  file: 
+    path: /etc/modprobe.d
+    state: directory
+
+- name: Prevent warning user with internal buzzer
+  become: yes
+  copy: 
+    src: ../files/nobeep.conf
+    dest: /etc/modprobe.d/nobeep.conf
+
 - name: Install ZSH
   become: yes
   pacman: 
