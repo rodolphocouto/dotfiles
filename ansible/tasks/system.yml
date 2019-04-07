@@ -93,6 +93,11 @@
   pacman:
     name: termite
 
+- name: Ensure termite config dir exists
+  file: 
+    path: ~/.config/termite
+    state: directory
+
 - name: Install core packages
   become: yes
   pacman:
@@ -118,11 +123,13 @@
       - noto-fonts
       - noto-fonts-emoji
       - noto-fonts-extra
+      - cantarell-fonts
+      - awesome-terminal-fonts
       - adobe-source-code-pro-fonts
 
 - name: Install aur fonts
   packer: 
-    name: nerd-fonts-complete
+    name: siji-git
 
 - name: Install Xorg and tools
   become: yes
@@ -136,9 +143,19 @@
   pacman: 
     name: i3-wm
 
+- name: Ensure i3 config dir exists
+  file: 
+    path: ~/.config/i3
+    state: directory
+
 - name: Install polybar
   packer: 
     name: polybar
+
+- name: Ensure polybar config dir exists
+  file: 
+    path: ~/.config/polybar
+    state: directory
 
 - name: Install rofi
   become: yes
@@ -148,6 +165,11 @@
 - name: Install rofi-calc
   packer:
     name: rofi-calc
+
+- name: Ensure rofi config dir exists
+  file: 
+    path: ~/.config/rofi
+    state: directory
 
 - name: Install pcman
   become: yes
@@ -164,3 +186,19 @@
       - light
       - lxappearance
       - lxrandr
+
+- name: Install arc-gtk-theme
+  become: yes
+  pacman:
+    name:
+      - arc-gtk-theme
+
+- name: Ensure gtk-2.0 config dir exists
+  file: 
+    path: ~/.config/gtk-2.0
+    state: directory
+
+- name: Ensure gtk-3.0 config dir exists
+  file: 
+    path: ~/.config/gtk-3.0
+    state: directory

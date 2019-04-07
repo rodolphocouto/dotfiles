@@ -1,6 +1,5 @@
 - name: Playbook to install dotfiles (https://github.com/rodolphocouto/dotfiles)
   hosts: localhost
-  connection: local
   tasks:
     - include: tasks/system.yml
     - include: tasks/applications.yml
