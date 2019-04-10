@@ -13,7 +13,7 @@
 - name: Clone yay repository
   git:
     repo: https://aur.archlinux.org/yay.git
-    dest: ~/yay
+    dest: ~/.yay
 
 - name: Check yay installation
   stat: 
@@ -24,7 +24,7 @@
 - name: Install yay
   shell: 
     cmd: makepkg -si --noconfirm
-    chdir: ~/yay
+    chdir: ~/.yay
   when: yay.stat.exists == False
 
 - name: Install connman
