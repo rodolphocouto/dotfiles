@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/webcal=google-chrome.desktop
+text/markdown=typora.desktop
+
+[Added Associations]
+application/pdf=google-chrome.desktop;
+text/markdown=typora.desktop;google-chrome.desktop;

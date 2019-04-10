@@ -234,11 +234,6 @@
     name:
       - arc-gtk-theme
 
-- name: Ensure gtk-2.0 config dir exists
-  file: 
-    path: ~/.config/gtk-2.0
-    state: directory
-
 - name: Ensure gtk-3.0 config dir exists
   file: 
     path: ~/.config/gtk-3.0
