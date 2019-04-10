@@ -35,6 +35,11 @@
   yay: 
     name: postman-bin
 
+- name: Ensure postman config dir exists
+  file: 
+    path: ~/.config/Postman/Postman_Config/0
+    state: directory
+
 - name: Install typora
   yay: 
     name: typora

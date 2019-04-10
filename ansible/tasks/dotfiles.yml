@@ -12,6 +12,7 @@
     - { src: "~/.dotfiles/.config/polybar/launch.sh", dest: "~/.config/polybar/launch.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl_playpause.sh", dest: "~/.config/polybar/playerctl_playpause.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl_title.sh", dest: "~/.config/polybar/playerctl_title.sh" }
+    - { src: "~/.dotfiles/.config/Postman/Postman_Config/0/userconfigs.json", dest: "~/.config/Postman/Postman_Config/0/userconfigs.json" }
     - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config" }
     - { src: "~/.dotfiles/.config/rofi/glue_pro_blue.rasi", dest: "~/.config/rofi/glue_pro_blue.rasi" }
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
