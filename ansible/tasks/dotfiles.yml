@@ -4,7 +4,6 @@
     - { src: "~/.dotfiles/.gitconfig", dest: "~/.gitconfig" }
     - { src: "~/.dotfiles/.xinitrc", dest: "~/.xinitrc" }
     - { src: "~/.dotfiles/.zshrc", dest: "~/.zshrc" }
-    - { src: "~/.dotfiles/.config/mimeapps.list", dest: "~/.config/mimeapps.list" }
     - { src: "~/.dotfiles/.config/gtk-3.0/settings.ini", dest: "~/.config/gtk-3.0/settings.ini" }
     - { src: "~/.dotfiles/.config/i3/config", dest: "~/.config/i3/config" }
     - { src: "~/.dotfiles/.config/i3/arch.png", dest: "~/.config/i3/arch.png" }
