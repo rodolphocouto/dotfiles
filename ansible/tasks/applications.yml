@@ -58,6 +58,13 @@
     enabled: yes
     state: started
 
+- name: Add user to docker group
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    group: docker
+    append: yes
+
 - name: Install aws-cli
   become: yes
   pacman: 
