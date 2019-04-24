@@ -79,10 +79,36 @@
       - bluez-utils
       - pulseaudio-bluetooth
 
-- name: Enable bluetooth service
+- name: Enable and start bluetooth service
   become: yes
   systemd: 
     name: bluetooth
+    enabled: yes
+    state: started
+
+- name: Install printing tools
+  become: yes
+  pacman:
+    name:
+      - cups
+      - foomatic-db
+      - foomatic-db-engine
+      - foomatic-db-gutenprint-ppds
+      - foomatic-db-ppds
+      - avahi
+      - nss-mdns
+
+- name: Enable and start avahi service
+  become: yes
+  systemd: 
+    name: avahi-daemon
+    enabled: yes
+    state: started
+
+- name: Enable and start cups service
+  become: yes
+  systemd: 
+    name: org.cups.cupsd
     enabled: yes
     state: started
 

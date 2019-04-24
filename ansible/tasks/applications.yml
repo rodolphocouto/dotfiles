@@ -51,7 +51,7 @@
       - docker
       - docker-compose
 
-- name: Enable docker daemon
+- name: Enable and start docker daemon
   become: yes
   systemd: 
     name: docker
