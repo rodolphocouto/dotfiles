@@ -61,14 +61,6 @@
     enabled: yes 
     state: started
 
-- name: Remove network tools from base
-  become: yes
-  pacman: 
-    name: 
-      - netctl
-      - dhcpcd
-    state: absent
-
 - name: Install audio tools
   become: yes
   pacman:
