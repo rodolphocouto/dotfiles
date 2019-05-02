@@ -70,6 +70,11 @@
   pacman: 
     name: aws-cli
 
+- name: Install terraform
+  become: yes
+  pacman: 
+    name: terraform
+
 - name: Install openjdk 8
   become: yes
   pacman: 
