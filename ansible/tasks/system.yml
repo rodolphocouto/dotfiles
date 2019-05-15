@@ -163,7 +163,7 @@
     path: ~/.config/termite
     state: directory
 
-- name: Install core packages
+- name: Install pacman core packages
   become: yes
   pacman:
     name:
@@ -177,6 +177,11 @@
       - jq
       - xclip
       - sl
+
+- name: Install aur core packages
+  yay: 
+    name: 
+      - wrk
 
 - name: Install pacman fonts
   become: yes
