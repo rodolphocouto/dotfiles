@@ -182,6 +182,7 @@
   yay: 
     name: 
       - wrk
+      - apache-tools
 
 - name: Install pacman fonts
   become: yes
