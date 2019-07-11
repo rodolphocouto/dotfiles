@@ -27,10 +27,6 @@
   yay: 
     name: skypeforlinux-preview-bin
 
-- name: Install whatsie
-  yay: 
-    name: whatsie
-
 - name: Install postman
   yay: 
     name: postman-bin
