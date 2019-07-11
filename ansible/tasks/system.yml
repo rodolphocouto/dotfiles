@@ -218,6 +218,7 @@
     name:
       - xorg-server
       - xorg-xinit
+      - xorg-xfd
 
 - name: Install i3
   become: yes
