@@ -222,7 +222,7 @@
 - name: Install i3
   become: yes
   pacman: 
-    name: i3-wm
+    name: i3-gaps
 
 - name: Ensure i3 config dir exists
   file: 
