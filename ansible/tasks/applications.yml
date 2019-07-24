@@ -1,3 +1,8 @@
+- name: Install libreoffice
+  become: yes
+  pacman: 
+    name: libreoffice
+
 - name: Install firefox
   become: yes
   pacman: 
