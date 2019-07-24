@@ -32,6 +32,10 @@
   yay: 
     name: skypeforlinux-preview-bin
 
+- name: Install whatsapp
+  yay: 
+    name: whatsapp-nativefier
+
 - name: Install postman
   yay: 
     name: postman-bin
