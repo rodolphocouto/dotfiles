@@ -42,10 +42,10 @@ font-5 = "Font Awesome 5 Brands:style=Regular:size=10;1"
 
 modules-left = i3
 modules-center = 
-modules-right = player_previous player_stop player_playpause player_next player_title pulseaudio filesystem xkeyboard memory cpu wlan eth battery temperature date
+modules-right = player_title player_previous player_stop player_playpause player_next pulseaudio filesystem xkeyboard memory cpu wlan eth battery temperature date
 
-;tray-position = right
-;tray-padding = 2
+tray-position = right
+tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
