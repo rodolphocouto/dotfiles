@@ -1,2 +1,9 @@
 # Ansible
 *.retry
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
