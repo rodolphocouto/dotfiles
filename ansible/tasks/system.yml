@@ -219,6 +219,8 @@
       - xorg-server
       - xorg-xinit
       - xorg-xfd
+      - xorg-xprop
+      - xorg-xkill
 
 - name: Install i3
   become: yes
