@@ -85,6 +85,11 @@
   pacman:
     name: jdk8-openjdk
 
+- name: Install openjdk 11
+  become: yes
+  pacman:
+    name: jdk11-openjdk
+
 - name: Install groovy
   become: yes
   pacman:
