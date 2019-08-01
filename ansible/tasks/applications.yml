@@ -1,64 +1,64 @@
 - name: Install libreoffice
   become: yes
-  pacman: 
+  pacman:
     name: libreoffice
 
 - name: Install firefox
   become: yes
-  pacman: 
+  pacman:
     name: firefox
 
 - name: Install chrome
-  yay: 
+  yay:
     name: google-chrome
 
 - name: Install sublime text
-  yay: 
+  yay:
     name: sublime-text-dev
 
 - name: Install vscode
-  yay: 
+  yay:
     name: visual-studio-code-bin
 
 - name: Install spotify
-  yay: 
+  yay:
     name: spotify
 
 - name: Install slack
-  yay: 
+  yay:
     name: slack-desktop
 
 - name: Install skype
-  yay: 
+  yay:
     name: skypeforlinux-preview-bin
 
 - name: Install whatsapp
-  yay: 
+  yay:
     name: whatsapp-nativefier
 
 - name: Install postman
-  yay: 
+  yay:
     name: postman-bin
 
 - name: Ensure postman config dir exists
-  file: 
+  file:
     path: ~/.config/Postman/Postman_Config/0
     state: directory
 
 - name: Install typora
-  yay: 
+  yay:
     name: typora
 
 - name: Install docker and docker-compose
   become: yes
-  pacman: 
-    name: 
+  pacman:
+    name:
       - docker
       - docker-compose
 
 - name: Enable and start docker daemon
   become: yes
-  systemd: 
+  systemd:
     name: docker
     enabled: yes
     state: started
@@ -72,17 +72,17 @@
 
 - name: Install aws-cli
   become: yes
-  pacman: 
+  pacman:
     name: aws-cli
 
 - name: Install terraform
   become: yes
-  pacman: 
+  pacman:
     name: terraform
 
 - name: Install openjdk 8
   become: yes
-  pacman: 
+  pacman:
     name: jdk8-openjdk
 
 - name: Install groovy
@@ -90,27 +90,42 @@
   pacman:
     name: groovy
 
-- name: Install golang
+- name: Install maven
   become: yes
-  pacman: 
+  pacman:
+    name: maven
+
+- name: Install gradle
+  become: yes
+  pacman:
+    name: gradle
+
+- name: Install go
+  become: yes
+  pacman:
     name: go
+
+- name: Install python
+  become: yes
+  pacman:
+    name: python
 
 - name: Install nodejs, npm and yarn
   become: yes
   pacman:
-    name: 
+    name:
       - nodejs
       - npm
       - yarn
 
 - name: Install intellij ultimate
-  yay: 
+  yay:
     name: intellij-idea-ultimate-edition
 
 - name: Install goland
-  yay: 
+  yay:
     name: goland
 
 - name: Install datagrip
-  yay: 
+  yay:
     name: datagrip
