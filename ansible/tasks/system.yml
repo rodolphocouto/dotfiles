@@ -163,6 +163,11 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
+- name: Install ranger
+  become: yes
+  pacman:
+    name: ranger
+
 - name: Install core packages
   become: yes
   pacman:
