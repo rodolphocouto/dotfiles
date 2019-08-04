@@ -10,6 +10,11 @@
       - zathura
       - zathura-pdf-mupdf
 
+- name: Install gimp
+  become: yes
+  pacman:
+    name: gimp
+
 - name: Install firefox
   become: yes
   pacman:
