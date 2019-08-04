@@ -22,43 +22,43 @@
     dest: ~/.yay
 
 - name: Check yay installation
-  stat: 
+  stat:
     path: /usr/bin/yay
   register: yay
   changed_when: False
 
 - name: Install yay
-  shell: 
+  shell:
     cmd: makepkg -si --noconfirm
     chdir: ~/.yay
   when: yay.stat.exists == False
 
 - name: Install connman
   become: yes
-  pacman: 
+  pacman:
     name: connman
 
 - name: Install connman-ncurses
-  yay: 
+  yay:
     name: connman-ncurses
 
 - name: Ensure connman config dir exists
   become: yes
-  file: 
-    path: /etc/connman 
+  file:
+    path: /etc/connman
     state: directory
 
 - name: Copy connman config
   become: yes
-  copy: 
-    src: ../files/connman.conf 
+  copy:
+    src: ../files/connman.conf
     dest: /etc/connman/main.conf
 
 - name: Enable and start connman
   become: yes
-  systemd: 
-    name: connman 
-    enabled: yes 
+  systemd:
+    name: connman
+    enabled: yes
     state: started
 
 - name: Install audio tools
@@ -81,7 +81,7 @@
 
 - name: Enable and start bluetooth service
   become: yes
-  systemd: 
+  systemd:
     name: bluetooth
     enabled: yes
     state: started
@@ -100,33 +100,33 @@
 
 - name: Enable and start avahi service
   become: yes
-  systemd: 
+  systemd:
     name: avahi-daemon
     enabled: yes
     state: started
 
 - name: Enable and start cups service
   become: yes
-  systemd: 
+  systemd:
     name: org.cups.cupsd
     enabled: yes
     state: started
 
 - name: Ensure modprobe config dir exists
   become: yes
-  file: 
+  file:
     path: /etc/modprobe.d
     state: directory
 
 - name: Prevent warning user with internal buzzer
   become: yes
-  copy: 
+  copy:
     src: ../files/nobeep.conf
     dest: /etc/modprobe.d/nobeep.conf
 
 - name: Install ZSH
   become: yes
-  pacman: 
+  pacman:
     name: zsh
 
 - name: Check user shell
@@ -139,7 +139,7 @@
   when: default_shell.stdout.find('/bin/zsh') == -1
 
 - name: Check oh-my-zsh installation
-  stat: 
+  stat:
     path: ~/.oh-my-zsh
   register: oh_my_zsh
   changed_when: False
@@ -149,7 +149,7 @@
   when: oh_my_zsh.stat.exists == False
 
 - name: Install lambda-mod ZSH theme
-  get_url: 
+  get_url:
     url: https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme
     dest: ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
 
@@ -163,17 +163,7 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-- name: Install termite
-  become: yes
-  pacman:
-    name: termite
-
-- name: Ensure termite config dir exists
-  file: 
-    path: ~/.config/termite
-    state: directory
-
-- name: Install pacman core packages
+- name: Install core packages
   become: yes
   pacman:
     name:
@@ -187,12 +177,6 @@
       - jq
       - xclip
       - sl
-
-- name: Install aur core packages
-  yay: 
-    name: 
-      - wrk
-      - apache-tools
 
 - name: Install pacman fonts
   become: yes
@@ -209,75 +193,5 @@
       - adobe-source-code-pro-fonts
 
 - name: Install aur fonts
-  yay: 
-    name: siji-git
-
-- name: Install Xorg and tools
-  become: yes
-  pacman:
-    name:
-      - xorg-server
-      - xorg-xinit
-      - xorg-xfd
-      - xorg-xprop
-      - xorg-xkill
-
-- name: Install i3
-  become: yes
-  pacman: 
-    name: i3-gaps
-
-- name: Ensure i3 config dir exists
-  file: 
-    path: ~/.config/i3
-    state: directory
-
-- name: Install polybar
-  yay: 
-    name: polybar
-
-- name: Ensure polybar config dir exists
-  file: 
-    path: ~/.config/polybar
-    state: directory
-
-- name: Install rofi
-  become: yes
-  pacman:
-    name: rofi
-
-- name: Install rofi-calc
   yay:
-    name: rofi-calc
-
-- name: Ensure rofi config dir exists
-  file: 
-    path: ~/.config/rofi
-    state: directory
-
-- name: Install pcman
-  become: yes
-  pacman: 
-    name: pcmanfm
-
-- name: Install screen utilities
-  become: yes
-  pacman:
-    name:
-      - i3lock
-      - scrot
-      - feh
-      - light
-      - lxappearance
-      - lxrandr
-
-- name: Install arc-gtk-theme
-  become: yes
-  pacman:
-    name:
-      - arc-gtk-theme
-
-- name: Ensure gtk-3.0 config dir exists
-  file: 
-    path: ~/.config/gtk-3.0
-    state: directory
+    name: siji-git

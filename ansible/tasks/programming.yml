@@ -83,6 +83,14 @@
   pacman:
     name: terraform
 
+- name: Install wrk
+  yay:
+    name: wrk
+
+- name: Install apache-tools
+  yay:
+    name: apache-tools
+
 - name: Install sublime text
   yay:
     name: sublime-text-dev

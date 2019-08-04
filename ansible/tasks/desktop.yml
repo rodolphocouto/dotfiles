@@ -1,0 +1,79 @@
+- name: Install Xorg and tools
+  become: yes
+  pacman:
+    name:
+      - xorg-server
+      - xorg-xinit
+      - xorg-xfd
+      - xorg-xprop
+      - xorg-xkill
+
+- name: Install i3
+  become: yes
+  pacman:
+    name: i3-gaps
+
+- name: Ensure i3 config dir exists
+  file:
+    path: ~/.config/i3
+    state: directory
+
+- name: Install polybar
+  yay:
+    name: polybar
+
+- name: Ensure polybar config dir exists
+  file:
+    path: ~/.config/polybar
+    state: directory
+
+- name: Install rofi
+  become: yes
+  pacman:
+    name: rofi
+
+- name: Install rofi-calc
+  yay:
+    name: rofi-calc
+
+- name: Ensure rofi config dir exists
+  file:
+    path: ~/.config/rofi
+    state: directory
+
+- name: Install termite
+  become: yes
+  pacman:
+    name: termite
+
+- name: Ensure termite config dir exists
+  file:
+    path: ~/.config/termite
+    state: directory
+
+- name: Install pcman
+  become: yes
+  pacman:
+    name: pcmanfm
+
+- name: Install screen utilities
+  become: yes
+  pacman:
+    name:
+      - i3lock
+      - scrot
+      - feh
+      - light
+      - lxappearance
+      - lxrandr
+
+- name: Install arc-gtk-theme
+  become: yes
+  pacman:
+    name:
+      - arc-gtk-theme
+
+- name: Ensure gtk-3.0 config dir exists
+  file:
+    path: ~/.config/gtk-3.0
+    state: directory
