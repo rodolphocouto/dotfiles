@@ -3,6 +3,13 @@
   pacman:
     name: libreoffice
 
+- name: Install zathura
+  become: yes
+  pacman:
+    name:
+      - zathura
+      - zathura-pdf-mupdf
+
 - name: Install firefox
   become: yes
   pacman:
