@@ -3,4 +3,5 @@
   tasks:
     - include: tasks/system.yml
     - include: tasks/applications.yml
+    - include: tasks/programming.yml
     - include: tasks/dotfiles.yml

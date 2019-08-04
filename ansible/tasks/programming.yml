@@ -1,0 +1,102 @@
+- name: Install openjdk 8
+  become: yes
+  pacman:
+    name: jdk8-openjdk
+
+- name: Install openjdk 11
+  become: yes
+  pacman:
+    name: jdk11-openjdk
+
+- name: Install groovy
+  become: yes
+  pacman:
+    name: groovy
+
+- name: Install maven
+  become: yes
+  pacman:
+    name: maven
+
+- name: Install gradle
+  become: yes
+  pacman:
+    name: gradle
+
+- name: Install go
+  become: yes
+  pacman:
+    name: go
+
+- name: Install python
+  become: yes
+  pacman:
+    name: python
+
+- name: Install nodejs, npm and yarn
+  become: yes
+  pacman:
+    name:
+      - nodejs
+      - npm
+      - yarn
+
+- name: Install docker and docker-compose
+  become: yes
+  pacman:
+    name:
+      - docker
+      - docker-compose
+
+- name: Enable and start docker daemon
+  become: yes
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: Add user to docker group
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    group: docker
+    append: yes
+
+- name: Install aws-cli
+  become: yes
+  pacman:
+    name: aws-cli
+
+- name: Install terraform
+  become: yes
+  pacman:
+    name: terraform
+
+- name: Install sublime text
+  yay:
+    name: sublime-text-dev
+
+- name: Install vscode
+  yay:
+    name: visual-studio-code-bin
+
+- name: Install postman
+  yay:
+    name: postman-bin
+
+- name: Ensure postman config dir exists
+  file:
+    path: ~/.config/Postman/Postman_Config/0
+    state: directory
+
+- name: Install intellij ultimate
+  yay:
+    name: intellij-idea-ultimate-edition
+
+- name: Install goland
+  yay:
+    name: goland
+
+- name: Install datagrip
+  yay:
+    name: datagrip
