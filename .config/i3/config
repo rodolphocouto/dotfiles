@@ -30,7 +30,7 @@ font pango:DejaVu Sans Mono, Awesome 10
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run,calc,window -show drun"
 
 # start i3lock (lockscreen)
-bindsym $mod+Shift+l exec i3lock -i ~/.config/i3/arch.png
+bindsym $mod+Shift+l exec i3lock -t -i ~/.config/i3/arch.png
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
