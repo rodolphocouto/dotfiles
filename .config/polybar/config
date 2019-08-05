@@ -42,7 +42,7 @@ font-5 = "Font Awesome 5 Brands:style=Regular:size=10;1"
 
 modules-left = i3
 modules-center = 
-modules-right = player_title player_previous player_stop player_playpause player_next pulseaudio filesystem xkeyboard memory cpu wlan eth battery temperature date
+modules-right = player_artist player_title player_previous player_stop player_playpause player_next pulseaudio filesystem xkeyboard memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -157,38 +157,49 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 ; Separator in between workspaces
 ; label-separator = |
 
-[module/player_previous]
-type = custom/text
-interval = 1
-content = 
-click-left = playerctl previous
-
-[module/player_stop]
-type = custom/text
-interval = 1
-content = 
-click-left = playerctl stop
-
-[module/player_playpause]
+[module/player_artist]
 type = custom/script
-interval = 1
-label = %output%
-exec = ~/.config/polybar/playerctl_playpause.sh
-click-left = playerctl play-pause
-
-[module/player_next]
-type = custom/text
-interval = 1
-content = 
-click-left = playerctl next
+tail = true
+label = "%{F#1db954}%{F-} %output:0:45:...%   -"
+exec = playerctl -p spotify -F metadata artist
+scroll-up = playerctl -p spotify previous
+scroll-down = playerctl -p spotify next
 
 [module/player_title]
 type = custom/script
-interval = 1
-label = "%{F#1db954}%{F-} %output:0:45:...%"
-exec = ~/.config/polybar/playerctl_title.sh
-scroll-up = playerctl previous
-scroll-down = playerctl next
+tail = true
+label = "%output:0:45:...%"
+exec = playerctl -p spotify -F metadata title
+scroll-up = playerctl -p spotify previous
+scroll-down = playerctl -p spotify next
+
+[module/player_previous]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/playerctl.sh previous
+click-left = playerctl -p spotify previous
+
+[module/player_stop]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/playerctl.sh stop
+click-left = playerctl -p spotify stop
+
+[module/player_playpause]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/playerctl.sh play-pause
+click-left = playerctl -p spotify play-pause
+
+[module/player_next]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/playerctl.sh next
+click-left = playerctl -p spotify next
 
 [module/xbacklight]
 type = internal/xbacklight
