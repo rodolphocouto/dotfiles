@@ -184,6 +184,7 @@
       - sl
       - neofetch
       - screenfetch
+      - htop
 
 - name: Install pacman fonts
   become: yes
