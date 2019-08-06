@@ -160,7 +160,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/player_artist]
 type = custom/script
 tail = true
-label = "%{F#1db954}%{F-} %output:0:45:...%   -"
+label = "%{F#1db954}%{F-} %output:0:25:...%   -"
 exec = playerctl -p spotify -F metadata artist
 scroll-up = playerctl -p spotify previous
 scroll-down = playerctl -p spotify next
@@ -168,7 +168,7 @@ scroll-down = playerctl -p spotify next
 [module/player_title]
 type = custom/script
 tail = true
-label = "%output:0:45:...%"
+label = "%output:0:30:...%"
 exec = playerctl -p spotify -F metadata title
 scroll-up = playerctl -p spotify previous
 scroll-down = playerctl -p spotify next
