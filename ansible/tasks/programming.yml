@@ -44,6 +44,11 @@
   pacman:
     name: python
 
+- name: Install ruby
+  become: yes
+  pacman:
+    name: ruby
+
 - name: Install nodejs, npm and yarn
   become: yes
   pacman:
