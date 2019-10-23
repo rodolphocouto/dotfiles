@@ -136,14 +136,7 @@
     path: ~/.config/Postman/Postman_Config/0
     state: directory
 
-- name: Install intellij ultimate
+- name: Install jetbrains toolbox
   yay:
-    name: intellij-idea-ultimate-edition
+    name: jetbrains-toolbox
 
-- name: Install goland
-  yay:
-    name: goland
-
-- name: Install datagrip
-  yay:
-    name: datagrip
