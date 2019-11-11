@@ -9,6 +9,7 @@
     - { src: "~/.dotfiles/.config/i3/arch.png", dest: "~/.config/i3/arch.png" }
     - { src: "~/.dotfiles/.config/polybar/config", dest: "~/.config/polybar/config" }
     - { src: "~/.dotfiles/.config/polybar/launch.sh", dest: "~/.config/polybar/launch.sh" }
+    - { src: "~/.dotfiles/.config/polybar/bluetooth.sh", dest: "~/.config/polybar/bluetooth.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl.sh", dest: "~/.config/polybar/playerctl.sh" }
     - { src: "~/.dotfiles/.config/Postman/Postman_Config/0/userconfigs.json", dest: "~/.config/Postman/Postman_Config/0/userconfigs.json" }
     - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config" }
