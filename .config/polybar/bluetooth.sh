@@ -8,6 +8,6 @@ else
     echo ""
   else
     device=$(bluetoothctl devices | cut -c 26-100)
-    echo "%{F#66ffffff} %{F-} $device"
+    echo "%{F#66ffffff}%{F-} $device"
   fi
 fi
