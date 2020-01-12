@@ -185,6 +185,7 @@
       - neofetch
       - screenfetch
       - htop
+      - nfs-utils
 
 - name: Install pacman fonts
   become: yes
