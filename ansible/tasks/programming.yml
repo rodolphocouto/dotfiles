@@ -78,6 +78,10 @@
     group: docker
     append: yes
 
+- name: Install ncurses5-compat-libs
+  yay:
+    name: ncurses5-compat-libs
+
 - name: Install virtualbox
   become: yes
   pacman:
@@ -139,4 +143,3 @@
 - name: Install jetbrains toolbox
   yay:
     name: jetbrains-toolbox
-
