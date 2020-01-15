@@ -220,6 +220,7 @@ for_window [class="Code"] move to workspace $ws1 focus
 for_window [class="Google-chrome"] move to workspace $ws2 focus
 for_window [class="Postman"] move to workspace $ws3 focus
 for_window [class="jetbrains-datagrip"] move to workspace $ws4 focus
+for_window [class="RedisDesktopManager"] move to workspace $ws4 focus
 for_window [class="Pcmanfm"] move to workspace $ws5 focus
 for_window [class="Subl3"] move to workspace $ws6 focus
 for_window [class="Slack"] move to workspace $ws7 focus
