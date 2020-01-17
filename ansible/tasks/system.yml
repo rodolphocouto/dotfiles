@@ -203,4 +203,6 @@
 
 - name: Install aur fonts
   yay:
-    name: siji-git
+    name:
+      - siji-git
+      - ttf-jetbrains-mono

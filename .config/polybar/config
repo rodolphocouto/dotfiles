@@ -28,24 +28,25 @@ border-size = 4
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = "siji:pixelsize=10;1"
-font-3 = "Font Awesome 5 Free:style=Regular:size=10;1"
-font-4 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-5 = "Font Awesome 5 Brands:style=Regular:size=10;1"
+font-0 = "JetBrains Mono:style=Regular:size=10;1"
+font-1 = fixed:pixelsize=10;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = "siji:pixelsize=10;1"
+font-4 = "Font Awesome 5 Free:style=Regular:size=10;1"
+font-5 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-6 = "Font Awesome 5 Brands:style=Regular:size=10;1"
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = player_artist player_title player_previous player_stop player_playpause player_next pulseaudio filesystem xkeyboard memory cpu wlan bluetooth eth battery temperature date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -75,7 +76,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label-layout = %layout%
 
-label-indicator-padding = 2
+label-indicator-padding = 1
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 
@@ -94,18 +95,18 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -131,7 +132,7 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -160,7 +161,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/player_artist]
 type = custom/script
 tail = true
-label = "%{F#1db954}%{F-} %output:0:25:...%   -"
+label = "%{F#1db954}%{F-} %output:0:20:...%  -"
 exec = playerctl -p spotify -F metadata artist
 scroll-up = playerctl -p spotify previous
 scroll-down = playerctl -p spotify next
@@ -168,7 +169,7 @@ scroll-down = playerctl -p spotify next
 [module/player_title]
 type = custom/script
 tail = true
-label = "%output:0:30:...%"
+label = "%output:0:20:...%"
 exec = playerctl -p spotify -F metadata title
 scroll-up = playerctl -p spotify previous
 scroll-down = playerctl -p spotify next
@@ -210,12 +211,12 @@ label = BL %percentage%%
 bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #fff
-bar-indicator-font = 2
+bar-indicator-font = 3
 bar-fill = ─
-bar-fill-font = 2
+bar-fill-font = 3
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
+bar-empty-font = 3
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/cpu]
@@ -307,11 +308,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 3
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 3
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 3
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
@@ -335,11 +336,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 3
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 3
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 3
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
