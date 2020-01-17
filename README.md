@@ -1,6 +1,6 @@
 # .dotfiles
 
-This is my Arch configuration running i3 as window manager
+My Arch configuration running i3 as window manager, powered by Ansible
 
 ![Desktop](screenshots/desktop.png)
 
@@ -9,7 +9,7 @@ This is my Arch configuration running i3 as window manager
 Run this:
 
 ```sh
-$ git clone https://github.com/rodolphocouto/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles
-$ ./setup.sh
+git clone https://github.com/rodolphocouto/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./setup.sh
 ```
