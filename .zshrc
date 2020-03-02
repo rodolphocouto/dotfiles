@@ -8,8 +8,19 @@ fi
 ZSH_THEME="lambda-mod"
 
 plugins=(
-    git 
-    zsh-autosuggestions 
+    archlinux
+    git
+    aws
+    docker
+    docker-compose
+    kops
+    kubectl
+    minikube
+    gradle
+    mvn
+    knife
+    knife_ssh
+    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
