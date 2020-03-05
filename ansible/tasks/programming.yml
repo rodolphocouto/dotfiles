@@ -95,15 +95,13 @@
     name: vboxdrv
     state: present
 
-- name: Install minikube
+- name: Install kubectl, k9s and minikube
   become: yes
   pacman:
-    name: minikube
-
-- name: Install kubectl
-  become: yes
-  pacman:
-    name: kubectl
+    name:
+      - kubectl
+      - k9s
+      - minikube
 
 - name: Install aws-cli
   become: yes
