@@ -1,6 +1,6 @@
 #!/bin/bash
 
-playerctl -p spotify -F status | while read status; do
+playerctl -p spotify -F status 2>/dev/null | while read status; do
   if [[ $status == "" ]]; then
     echo ""
   else

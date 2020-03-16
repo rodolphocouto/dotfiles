@@ -162,45 +162,45 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = custom/script
 tail = true
 label = "%{F#1db954}%{F-} %output:0:20:...%  -"
-exec = playerctl -p spotify -F metadata artist
-scroll-up = playerctl -p spotify previous
-scroll-down = playerctl -p spotify next
+exec = playerctl -p spotify -F metadata artist 2>/dev/null
+scroll-up = playerctl -p spotify previous 2>/dev/null
+scroll-down = playerctl -p spotify next 2>/dev/null
 
 [module/player_title]
 type = custom/script
 tail = true
 label = "%output:0:20:...%"
-exec = playerctl -p spotify -F metadata title
-scroll-up = playerctl -p spotify previous
-scroll-down = playerctl -p spotify next
+exec = playerctl -p spotify -F metadata title 2>/dev/null
+scroll-up = playerctl -p spotify previous 2>/dev/null
+scroll-down = playerctl -p spotify next 2>/dev/null
 
 [module/player_previous]
 type = custom/script
 tail = true
 label = %output%
 exec = ~/.config/polybar/playerctl.sh previous
-click-left = playerctl -p spotify previous
+click-left = playerctl -p spotify previous 2>/dev/null
 
 [module/player_stop]
 type = custom/script
 tail = true
 label = %output%
 exec = ~/.config/polybar/playerctl.sh stop
-click-left = playerctl -p spotify stop
+click-left = playerctl -p spotify stop 2>/dev/null
 
 [module/player_playpause]
 type = custom/script
 tail = true
 label = %output%
 exec = ~/.config/polybar/playerctl.sh play-pause
-click-left = playerctl -p spotify play-pause
+click-left = playerctl -p spotify play-pause 2>/dev/null
 
 [module/player_next]
 type = custom/script
 tail = true
 label = %output%
 exec = ~/.config/polybar/playerctl.sh next
-click-left = playerctl -p spotify next
+click-left = playerctl -p spotify next 2>/dev/null
 
 [module/xbacklight]
 type = internal/xbacklight
