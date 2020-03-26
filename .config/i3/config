@@ -205,7 +205,7 @@ client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
 client.unfocused #073642 #073642 #93a1a1 #586e75
 client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
-gaps outer 5
+gaps outer 0
 gaps inner 10
 
 smart_gaps on
