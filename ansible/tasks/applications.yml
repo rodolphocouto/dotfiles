@@ -32,6 +32,11 @@
   yay:
     name: slack-desktop
 
+- name: Install discord
+  become: yes
+  pacman:
+    name: discord
+
 - name: Install skype
   yay:
     name: skypeforlinux-preview-bin
