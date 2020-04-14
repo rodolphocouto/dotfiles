@@ -103,6 +103,10 @@
       - k9s
       - minikube
 
+- name: Install github-cli
+  yay:
+    name: github-cli
+
 - name: Install aws-cli
   become: yes
   pacman:
