@@ -39,10 +39,12 @@
   pacman:
     name: go
 
-- name: Install python
+- name: Install python and pip
   become: yes
   pacman:
-    name: python
+    name: 
+      - python
+      - python-pip
 
 - name: Install ruby
   become: yes
