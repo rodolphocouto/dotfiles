@@ -7,6 +7,8 @@
       - xorg-xfd
       - xorg-xprop
       - xorg-xkill
+      - xautomation
+      - xbindkeys
 
 - name: Install i3
   become: yes
