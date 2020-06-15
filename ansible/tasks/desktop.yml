@@ -69,6 +69,10 @@
       - lxappearance
       - lxrandr
 
+- name: Install autorandr
+  yay:
+    name: autorandr
+
 - name: Install arc-gtk-theme
   become: yes
   pacman:
