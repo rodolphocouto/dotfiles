@@ -1,3 +1,5 @@
 #!/bin/sh
 
+setxkbmap -model abnt2 -layout br
+localectl set-x11-keymap br abnt2
 i3-msg restart

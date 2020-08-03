@@ -1,3 +1,5 @@
 #!/bin/sh
 
+setxkbmap -model pc105 -layout us -variant intl
+localectl set-x11-keymap us pc105 intl
 i3-msg restart
