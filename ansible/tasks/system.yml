@@ -94,18 +94,6 @@
     enabled: yes
     state: started
 
-- name: Install printing tools
-  become: yes
-  pacman:
-    name:
-      - cups
-      - foomatic-db
-      - foomatic-db-engine
-      - foomatic-db-gutenprint-ppds
-      - foomatic-db-ppds
-      - avahi
-      - nss-mdns
-
 - name: Enable and start avahi service
   become: yes
   systemd:
