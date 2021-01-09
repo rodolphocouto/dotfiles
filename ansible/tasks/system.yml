@@ -188,3 +188,15 @@
     name:
       - siji-git
       - ttf-jetbrains-mono
+
+- name: Setup global git config
+  git_config:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    scope: global
+  with_items:
+    - { name: "user.name",   value: "Rodolpho Couto" }
+    - { name: "user.email",  value: "rodolpho.couto@ifood.com.br" }
+    - { name: "core.editor", value: "vim" }
+    - { name: "pull.rebase", value: "false" }
+    - { name: "ui.color",    value: "true" }
