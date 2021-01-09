@@ -76,7 +76,7 @@
 - name: Add user to docker group
   become: yes
   user:
-    name: "{{ ansible_user }}"
+    name: "{{ lookup('env','USER') }}"
     group: docker
     append: yes
 
