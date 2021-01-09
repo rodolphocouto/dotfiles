@@ -42,7 +42,7 @@
 - name: Install python and pip
   become: yes
   pacman:
-    name: 
+    name:
       - python
       - python-pip
 
@@ -138,11 +138,6 @@
 - name: Install postman
   yay:
     name: postman-bin
-
-- name: Ensure postman config dir exists
-  file:
-    path: ~/.config/Postman/Postman_Config/0
-    state: directory
 
 - name: Install jetbrains toolbox
   yay:
