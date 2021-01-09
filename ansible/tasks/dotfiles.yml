@@ -16,5 +16,4 @@
     - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config" }
     - { src: "~/.dotfiles/.config/rofi/glue_pro_blue.rasi", dest: "~/.config/rofi/glue_pro_blue.rasi" }
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
-    - { src: "~/.dotfiles/.config/autorandr/docked/postswitch", dest: "~/.config/autorandr/docked/postswitch" }
-    - { src: "~/.dotfiles/.config/autorandr/mobile/postswitch", dest: "~/.config/autorandr/mobile/postswitch" }
+    - { src: "~/.dotfiles/.config/autorandr/postswitch", dest: "~/.config/autorandr/postswitch" }
