@@ -94,20 +94,6 @@
     enabled: yes
     state: started
 
-- name: Enable and start avahi service
-  become: yes
-  systemd:
-    name: avahi-daemon
-    enabled: yes
-    state: started
-
-- name: Enable and start cups service
-  become: yes
-  systemd:
-    name: org.cups.cupsd
-    enabled: yes
-    state: started
-
 - name: Ensure modprobe config dir exists
   become: yes
   file:
