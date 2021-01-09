@@ -78,7 +78,6 @@
   user:
     name: "{{ lookup('env','USER') }}"
     group: docker
-    append: yes
 
 - name: Install ncurses5-compat-libs
   yay:
