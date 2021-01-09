@@ -228,6 +228,5 @@ for_window [class="Slack"] move to workspace $ws7 focus
 for_window [class="discord"] move to workspace $ws7 focus
 for_window [class="whats-app-nativefier-d52542"] move to workspace $ws8 focus
 for_window [class="google-calendar-dark-nativefier-e22938"] move to workspace $ws7 focus
-for_window [class="Skype"] move to workspace $ws8 focus
 for_window [class="Spotify"] move to workspace $ws9 focus
 for_window [class="Termite"] move to workspace $ws10 focus
