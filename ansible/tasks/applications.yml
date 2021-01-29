@@ -37,6 +37,11 @@
   pacman:
     name: discord
 
+- name: Install telegram
+  become: yes
+  pacman:
+    name: telegram-desktop
+
 - name: Install whatsapp
   yay:
     name: whatsapp-nativefier
