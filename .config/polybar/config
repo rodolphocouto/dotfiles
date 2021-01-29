@@ -43,7 +43,7 @@ font-6 = "Font Awesome 5 Brands:style=Regular:size=10;1"
 
 modules-left = i3
 modules-center =
-modules-right = player_artist player_title player_previous player_stop player_playpause player_next pulseaudio filesystem xkeyboard memory cpu wlan bluetooth eth battery temperature date
+modules-right = player_artist player_title player_previous player_stop player_playpause player_next pulseaudio xkeyboard memory cpu filesystem wlan bluetooth eth battery temperature date
 
 tray-position = right
 tray-padding = 1
@@ -86,7 +86,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#555}%{F-} %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -222,7 +222,7 @@ bar-empty-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
@@ -353,7 +353,7 @@ format-charging = <animation-charging> <label-charging>
 
 format-discharging = <animation-discharging> <label-discharging>
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
 ramp-capacity-0 = 
