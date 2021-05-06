@@ -19,3 +19,9 @@
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
     - { src: "~/.dotfiles/.config/autorandr/settings.ini", dest: "~/.config/autorandr/settings.ini" }
     - { src: "~/.dotfiles/.config/autorandr/postswitch", dest: "~/.config/autorandr/postswitch" }
+    - { src: "~/.dotfiles/.config/JetBrains/DataGrip2021.1/idea.properties", dest: "~/.config/JetBrains/DataGrip2021.1/idea.properties" }
+    - { src: "~/.dotfiles/.config/JetBrains/DataGrip2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/DataGrip2021.1/keymaps/XWin copy.xml" }
+    - { src: "~/.dotfiles/.config/JetBrains/IdeaIC2021.1/idea.properties", dest: "~/.config/JetBrains/IdeaIC2021.1/idea.properties" }
+    - { src: "~/.dotfiles/.config/JetBrains/IdeaIC2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/IdeaIC2021.1/keymaps/XWin copy.xml" }
+    - { src: "~/.dotfiles/.config/JetBrains/IntelliJIdea2021.1/idea.properties", dest: "~/.config/JetBrains/IntelliJIdea2021.1/idea.properties" }
+    - { src: "~/.dotfiles/.config/JetBrains/IntelliJIdea2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/IntelliJIdea2021.1/keymaps/XWin copy.xml" }
