@@ -189,6 +189,18 @@
       - siji-git
       - ttf-jetbrains-mono
 
+- name: Install light
+  become: yes
+  pacman:
+    name: light
+
+- name: Add user to video group
+  become: yes
+  user:
+    name: "{{ lookup('env','USER') }}"
+    groups: video
+    append: true
+
 - name: Setup global git config
   git_config:
     name: "{{ item.name }}"

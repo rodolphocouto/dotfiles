@@ -77,7 +77,8 @@
   become: yes
   user:
     name: "{{ lookup('env','USER') }}"
-    group: docker
+    groups: docker
+    append: true
 
 - name: Install ncurses5-compat-libs
   yay:
@@ -89,12 +90,6 @@
     name:
       - virtualbox
       - virtualbox-host-modules-arch
-
-- name: Load virtualbox kernel modules
-  become: yes
-  modprobe:
-    name: vboxdrv
-    state: present
 
 - name: Install kubectl, k9s and minikube
   become: yes
