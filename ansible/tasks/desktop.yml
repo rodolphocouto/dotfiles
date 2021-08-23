@@ -10,14 +10,22 @@
       - xautomation
       - xbindkeys
 
-- name: Install i3
+- name: Install i3, i3status and i3lock
   become: yes
   pacman:
-    name: i3-gaps
+    name:
+      - i3-gaps
+      - i3status
+      - i3lock
 
 - name: Ensure i3 config dir exists
   file:
     path: ~/.config/i3
+    state: directory
+
+- name: Ensure i3status config dir exists
+  file:
+    path: ~/.config/i3status
     state: directory
 
 - name: Install polybar
@@ -62,7 +70,6 @@
   become: yes
   pacman:
     name:
-      - i3lock
       - scrot
       - feh
       - lxappearance
