@@ -15,8 +15,7 @@
     - { src: "~/.dotfiles/.config/polybar/launch.sh", dest: "~/.config/polybar/launch.sh" }
     - { src: "~/.dotfiles/.config/polybar/bluetooth.sh", dest: "~/.config/polybar/bluetooth.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl.sh", dest: "~/.config/polybar/playerctl.sh" }
-    - { src: "~/.dotfiles/.config/rofi/config", dest: "~/.config/rofi/config" }
-    - { src: "~/.dotfiles/.config/rofi/glue_pro_blue.rasi", dest: "~/.config/rofi/glue_pro_blue.rasi" }
+    - { src: "~/.dotfiles/.config/rofi/config.rasi", dest: "~/.config/rofi/config.rasi" }
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
     - { src: "~/.dotfiles/.config/autorandr/settings.ini", dest: "~/.config/autorandr/settings.ini" }
     - { src: "~/.dotfiles/.config/autorandr/postswitch", dest: "~/.config/autorandr/postswitch" }
