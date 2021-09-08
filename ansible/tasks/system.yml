@@ -137,6 +137,11 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
+- name: Install fzf
+  become: yes
+  pacman:
+    name: fzf
+
 - name: Install ranger
   become: yes
   pacman:

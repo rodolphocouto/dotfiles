@@ -9,6 +9,7 @@ ZSH_THEME="lambda-mod"
 
 plugins=(
     archlinux
+    fzf
     git
     aws
     docker
