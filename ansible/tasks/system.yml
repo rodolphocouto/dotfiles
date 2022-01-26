@@ -66,8 +66,8 @@
   pacman:
     name:
       - alsa-utils
-      - pulseaudio
-      - pulseaudio-alsa
+      - pipewire
+      - pipewire-pulse
       - pavucontrol
       - playerctl
       - pamixer
@@ -78,7 +78,6 @@
     name:
       - bluez
       - bluez-utils
-      - pulseaudio-bluetooth
 
 - name: Enable and start bluetooth service
   become: yes
