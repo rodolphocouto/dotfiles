@@ -8,16 +8,21 @@
   pacman:
     name: jdk11-openjdk
 
+- name: Install openjdk 17
+  become: yes
+  pacman:
+    name: jdk11-openjdk
+
 - name: Check default java environment
   become: yes
   shell: archlinux-java get
   register: default_java
   changed_when: False
 
-- name: Set openjdk-11 as default java environment
+- name: Set openjdk-17 as default java environment
   become: yes
-  shell: archlinux-java set java-11-openjdk
-  when: default_java.stdout != 'java-11-openjdk'
+  shell: archlinux-java set java-17-openjdk
+  when: default_java.stdout != 'java-17-openjdk'
 
 - name: Install groovy
   become: yes
