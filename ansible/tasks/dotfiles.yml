@@ -16,6 +16,7 @@
     - { src: "~/.dotfiles/.config/polybar/bluetooth.sh", dest: "~/.config/polybar/bluetooth.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl.sh", dest: "~/.config/polybar/playerctl.sh" }
     - { src: "~/.dotfiles/.config/rofi/config.rasi", dest: "~/.config/rofi/config.rasi" }
+    - { src: "~/.dotfiles/.config/alacritty/alacritty.yml", dest: "~/.config/alacritty/alacritty.yml" }
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
     - { src: "~/.dotfiles/.config/autorandr/settings.ini", dest: "~/.config/autorandr/settings.ini" }
     - { src: "~/.dotfiles/.config/autorandr/postswitch", dest: "~/.config/autorandr/postswitch" }
