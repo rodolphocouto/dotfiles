@@ -16,3 +16,8 @@ font:
     style: Bold Italic
 
   size: 12
+
+window:
+  padding:
+    x: 12
+    y: 12
