@@ -9,6 +9,9 @@
 general {
         colors = true
         interval = 5
+        color_good = '#88b090'
+        color_degraded = '#ffb52a'
+        color_bad = '#e60053'
 }
 
 #order += "ipv6"
@@ -40,8 +43,8 @@ path_exists VPN {
 }
 
 volume master {
-        format = "vol: %volume"
-        format_muted = "vol:︁ muted (%volume)"
+        format = " %volume"
+        format_muted = "︁ muted"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
@@ -60,7 +63,7 @@ battery all {
 }
 
 disk "/" {
-        format = " hdd: %percentage_used"
+        format = " %percentage_used"
 }
 
 load {
@@ -68,14 +71,14 @@ load {
 }
 
 cpu_usage {
-        format = " cpu: %usage"
+        format = " %usage"
         max_threshold = 75
 }
 
 memory {
-        format = " mem: %percentage_used"
+        format = " %percentage_used"
         threshold_degraded = "1G"
-        format_degraded = " mem: < %available"
+        format_degraded = " < %available"
 }
 
 tztime local {
