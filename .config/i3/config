@@ -36,7 +36,7 @@ bindsym $mod+Shift+l exec i3lock -t -i ~/.config/i3/arch.png
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -232,3 +232,4 @@ for_window [class="whatsapp-nativefier-d40211"] move to workspace $ws8 focus
 for_window [class="Telegram"] move to workspace $ws8 focus
 for_window [class="Spotify"] move to workspace $ws9 focus
 for_window [class="Termite"] move to workspace $ws10 focus
+for_window [class="Alacritty"] move to workspace $ws10 focus

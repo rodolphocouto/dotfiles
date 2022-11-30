@@ -56,6 +56,11 @@
   pacman:
     name: termite
 
+- name: Install alacritty
+  become: yes
+  pacman:
+    name: alacritty
+
 - name: Ensure termite config dir exists
   file:
     path: ~/.config/termite
