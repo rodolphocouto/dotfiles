@@ -61,6 +61,11 @@
     enabled: yes
     state: started
 
+- name: Install Connman UI Setup (cmst)
+  become: yes
+  pacman:
+    name: cmst
+
 - name: Install audio tools
   become: yes
   pacman:
