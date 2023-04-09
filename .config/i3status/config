@@ -27,7 +27,7 @@ order += "cpu_usage"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "︁%quality %essid %ip"
+        format_up = " wifi︁%quality %essid %ip"
         format_down = "W: down"
 }
 
@@ -39,11 +39,11 @@ ethernet _first_ {
 path_exists VPN {
         # path exists when a VPN tunnel launched by nmcli/nm-applet is active
         path = "/proc/sys/net/ipv4/conf/tun0"
-        format = "vpn: %status"
+        format = " vpn %status"
 }
 
 volume master {
-        format = " %volume"
+        format = " vol %volume"
         format_muted = "︁ muted"
         device = "default"
         mixer = "Master"
@@ -53,17 +53,17 @@ volume master {
 battery all {
         format = "%status %percentage"
         format_down = "No battery"
-        status_chr = "︁︁ chr:"
-        status_bat = "︁ bat:"
+        status_chr = " bat"
+        status_bat = "︁ bat"
         status_unk = "? unk"
-        status_full = "︁ bat:︁"
+        status_full = "︁ bat︁"
         path = "/sys/class/power_supply/BAT%d/uevent"
         last_full_capacity = true
         low_threshold = 10
 }
 
 disk "/" {
-        format = " %percentage_used"
+        format = " disk %percentage_used"
 }
 
 load {
@@ -71,16 +71,16 @@ load {
 }
 
 cpu_usage {
-        format = " %usage"
+        format = " cpu %usage"
         max_threshold = 75
 }
 
 memory {
-        format = " %percentage_used"
+        format = " mem %percentage_used"
         threshold_degraded = "1G"
         format_degraded = " < %available"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = " %Y-%m-%d %H:%M:%S"
 }
