@@ -16,13 +16,7 @@
     - { src: "~/.dotfiles/.config/polybar/bluetooth.sh", dest: "~/.config/polybar/bluetooth.sh" }
     - { src: "~/.dotfiles/.config/polybar/playerctl.sh", dest: "~/.config/polybar/playerctl.sh" }
     - { src: "~/.dotfiles/.config/rofi/config.rasi", dest: "~/.config/rofi/config.rasi" }
-    - { src: "~/.dotfiles/.config/alacritty/alacritty.yml", dest: "~/.config/alacritty/alacritty.yml" }
+    - { src: "~/.dotfiles/.config/alacritty/alacritty.toml", dest: "~/.config/alacritty/alacritty.toml" }
     - { src: "~/.dotfiles/.config/termite/config", dest: "~/.config/termite/config" }
     - { src: "~/.dotfiles/.config/autorandr/settings.ini", dest: "~/.config/autorandr/settings.ini" }
     - { src: "~/.dotfiles/.config/autorandr/postswitch", dest: "~/.config/autorandr/postswitch" }
-    - { src: "~/.dotfiles/.config/JetBrains/DataGrip2021.1/idea.properties", dest: "~/.config/JetBrains/DataGrip2021.1/idea.properties" }
-    - { src: "~/.dotfiles/.config/JetBrains/DataGrip2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/DataGrip2021.1/keymaps/XWin copy.xml" }
-    - { src: "~/.dotfiles/.config/JetBrains/IdeaIC2021.1/idea.properties", dest: "~/.config/JetBrains/IdeaIC2021.1/idea.properties" }
-    - { src: "~/.dotfiles/.config/JetBrains/IdeaIC2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/IdeaIC2021.1/keymaps/XWin copy.xml" }
-    - { src: "~/.dotfiles/.config/JetBrains/IntelliJIdea2021.1/idea.properties", dest: "~/.config/JetBrains/IntelliJIdea2021.1/idea.properties" }
-    - { src: "~/.dotfiles/.config/JetBrains/IntelliJIdea2021.1/keymaps/XWin copy.xml", dest: "~/.config/JetBrains/IntelliJIdea2021.1/keymaps/XWin copy.xml" }
