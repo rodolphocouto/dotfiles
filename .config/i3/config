@@ -94,7 +94,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 "
-set $ws2 "2 "
+set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
@@ -223,6 +223,8 @@ for_window [class="jetbrains-idea"] move to workspace $ws1 focus
 for_window [class="jetbrains-code-with-me-guest"] move to workspace $ws1 focus
 for_window [class="Code"] move to workspace $ws1 focus
 for_window [class="Google-chrome"] move to workspace $ws2 focus
+for_window [class="firefox"] move to workspace $ws2 focus
+for_window [class="browser"] move to workspace $ws2 focus
 for_window [class="Postman"] move to workspace $ws3 focus
 for_window [class="jetbrains-datagrip"] move to workspace $ws4 focus
 for_window [class="RedisDesktopManager"] move to workspace $ws4 focus
