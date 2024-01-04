@@ -28,12 +28,12 @@ order += "tztime local"
 
 wireless _first_ {
         format_up = " wifi︁%quality %essid %ip"
-        format_down = "W: down"
+        format_down = ""
 }
 
 ethernet _first_ {
         format_up = " %ip (%speed)"
-        format_down = " down"
+        format_down = ""
 }
 
 path_exists VPN {
