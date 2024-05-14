@@ -222,7 +222,7 @@ new_window 1pixel
 for_window [class="jetbrains-idea"] move to workspace $ws1 focus
 for_window [class="jetbrains-code-with-me-guest"] move to workspace $ws1 focus
 for_window [class="Code"] move to workspace $ws1 focus
-for_window [class="Google-chrome"] move to workspace $ws2 focus
+for_window [class="brave-browser"] move to workspace $ws2 focus
 for_window [class="firefox"] move to workspace $ws2 focus
 for_window [class="browser"] move to workspace $ws2 focus
 for_window [class="Postman"] move to workspace $ws3 focus

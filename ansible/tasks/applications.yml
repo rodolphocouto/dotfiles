@@ -20,9 +20,9 @@
   pacman:
     name: firefox
 
-- name: Install chrome
+- name: Install brave
   yay:
-    name: google-chrome
+    name: brave-bin
 
 - name: Install spotify
   yay:
