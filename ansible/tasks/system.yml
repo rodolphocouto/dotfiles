@@ -91,6 +91,12 @@
     enabled: yes
     state: started
 
+- name: Install battery tools
+  become: yes
+  pacman:
+    name:
+      - upower
+
 - name: Ensure modprobe config dir exists
   become: yes
   file:

@@ -1,0 +1,94 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "space-villain"
+
+[icons]
+icons = "awesome4"
+
+[[block]]
+block = "music"
+format = "{  $combo.str(max_w:30,rot_interval:0.5) $prev $play $next |}"
+player = "spotify"
+
+[[block]]
+block = "docker"
+interval = 5
+format = "  $running.eng(w:1) "
+[[block.click]]
+button = "left"
+cmd = "docker ps | rofi -dmenu"
+
+[[block]]
+block = "custom"
+command = "if [ -d /proc/sys/net/ipv4/conf/tun0 ]; then echo \" vpn on\"; else echo \" vpn off\"; fi"
+interval = 3
+
+[[block]]
+block = "net"
+format = " {$icon $signal_strength $ssid|} $ip "
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "bluetooth"
+mac = "88:C9:E8:79:D8:88"
+disconnected_format = " $icon off "
+format = " $icon $percentage "
+[block.battery_state]
+"0..20" = "critical"
+"21..40" = "warning"
+"41..100" = "good"
+
+[[block]]
+block = "battery"
+format = " $icon $percentage "
+full_format = " $icon $percentage "
+device = "BAT0"
+driver = "upower"
+
+[[block]]
+block = "cpu"
+info_cpu = 20
+warning_cpu = 50
+critical_cpu = 90
+
+[[block]]
+block = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon $available.eng(w:2) "
+
+[[block]]
+block = "packages"
+package_manager = ["pacman", "aur"]
+interval = 600
+error_interval = 300
+format = " $icon $total updates "
+format_singular = " $icon $total update "
+format_up_to_date = " $icon up to date "
+aur_command = "yay -Qua"
+[[block.click]]
+button = "left"
+cmd = "fakeroot yay -Qu --dbpath /tmp/checkup-db-i3statusrs-$USER/ | rofi -dmenu"
+[[block.click]]
+button = "right"
+update = true
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R')"

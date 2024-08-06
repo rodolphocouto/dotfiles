@@ -28,6 +28,15 @@
     path: ~/.config/i3status
     state: directory
 
+- name: Install i3status-rs
+  yay:
+    name: i3status-rust
+
+- name: Ensure i3status-rs config dir exists
+  file:
+    path: ~/.config/i3status-rs
+    state: directory
+
 - name: Install polybar
   yay:
     name: polybar
