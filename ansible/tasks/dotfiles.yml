@@ -11,6 +11,7 @@
     - { src: "~/.dotfiles/.config/i3/config", dest: "~/.config/i3/config" }
     - { src: "~/.dotfiles/.config/i3status/config", dest: "~/.config/i3status/config" }
     - { src: "~/.dotfiles/.config/i3status-rs/config.toml", dest: "~/.config/i3status-rs/config.toml" }
+    - { src: "~/.dotfiles/.config/i3status-rs/vpn.sh", dest: "~/.config/i3status-rs/vpn.sh" }
     - { src: "~/.dotfiles/.config/i3/arch.png", dest: "~/.config/i3/arch.png" }
     - { src: "~/.dotfiles/.config/polybar/config", dest: "~/.config/polybar/config" }
     - { src: "~/.dotfiles/.config/polybar/launch.sh", dest: "~/.config/polybar/launch.sh" }

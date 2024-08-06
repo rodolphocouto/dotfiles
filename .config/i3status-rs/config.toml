@@ -1,7 +1,7 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "space-villain"
+theme = "plain"
 
 [icons]
 icons = "awesome4"
@@ -14,14 +14,16 @@ player = "spotify"
 [[block]]
 block = "docker"
 interval = 5
-format = "  $running.eng(w:1) "
+format = "  $running.eng(w:1)/$total.eng(w:1) "
 [[block.click]]
 button = "left"
 cmd = "docker ps | rofi -dmenu"
 
 [[block]]
 block = "custom"
-command = "if [ -d /proc/sys/net/ipv4/conf/tun0 ]; then echo \" vpn on\"; else echo \" vpn off\"; fi"
+command = ".config/i3status-rs/vpn.sh"
+format = "  vpn $text "
+json = true
 interval = 3
 
 [[block]]
@@ -39,10 +41,6 @@ block = "bluetooth"
 mac = "88:C9:E8:79:D8:88"
 disconnected_format = " $icon off "
 format = " $icon $percentage "
-[block.battery_state]
-"0..20" = "critical"
-"21..40" = "warning"
-"41..100" = "good"
 
 [[block]]
 block = "battery"
