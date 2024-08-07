@@ -4,7 +4,7 @@ icons_format = "{icon}"
 theme = "plain"
 
 [icons]
-icons = "awesome4"
+icons = "awesome6"
 
 [[block]]
 block = "music"

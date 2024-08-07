@@ -116,8 +116,8 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-#bindsym $mod+Tab workspace next
-#bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+Shift+Ctrl+Left move workspace to output left
 bindsym $mod+Shift+Ctrl+Down move workspace to output down
@@ -178,6 +178,7 @@ exec_always --no-startup-id "xbindkeys"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    position top
     status_command i3status-rs ~/.config/i3status-rs/config.toml
     #status_command i3status
     #i3bar_command ~/.config/polybar/launch.sh
@@ -214,7 +215,7 @@ gaps outer 0
 gaps inner 10
 
 smart_gaps on
-smart_borders no_gaps
+smart_borders on
 
 # Client to workspace assignments
 for_window [class="^.*"] border pixel 1
